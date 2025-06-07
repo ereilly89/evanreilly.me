@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14% 4%;
+  --muted: 60 5% 96%;
+  --muted-foreground: 25 5% 45%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14% 4%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14% 4%;
+  --border: 20 6% 90%;
+  --input: 20 6% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 5% 96%;
+  --secondary-foreground: 24 10% 10%;
+  --accent: 197 71% 52%;
+  --accent-foreground: 24 10% 10%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 60 9% 98%;
+  --ring: 20 14% 4%;
+  --radius: 0.5rem;
+  
+  /* Custom portfolio colors */
+  --hero-gradient-from: 240 73% 65%;
+  --hero-gradient-to: 266 68% 63%;
+  --text-light: 25 5% 45%;
+  --bg-light: 60 5% 97%;
+}
+
+.dark {
+  --background: 240 10% 4%;
+  --foreground: 0 0% 98%;
+  --muted: 240 4% 16%;
+  --muted-foreground: 240 5% 65%;
+  --popover: 240 10% 4%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 4%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 4% 16%;
+  --input: 240 4% 16%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 4% 16%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 197 71% 52%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 5% 84%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--hero-gradient-from)) 0%, hsl(var(--hero-gradient-to)) 100%);
+  }
+
+  .section-padding {
+    @apply py-24 lg:py-32;
+  }
+
+  .section-title {
+    @apply text-4xl lg:text-5xl font-bold text-center mb-12 relative;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply absolute w-16 h-1 bg-primary left-1/2 transform -translate-x-1/2 mt-2;
+    bottom: -1rem;
+  }
+
+  .social-icon {
+    @apply w-12 h-12 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center text-lg transition-all duration-300 hover:bg-white hover:text-primary hover:-translate-y-1;
+  }
+
+  .project-card {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden h-full;
+  }
+
+  .tech-tag {
+    @apply inline-block bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-accent hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 border-2 border-gray-200 rounded-lg font-medium transition-all duration-300 focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/20;
+  }
+
+  .navbar-blur {
+    @apply backdrop-blur-md bg-white/95 shadow-lg;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent));
+}
