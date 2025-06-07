@@ -13,7 +13,7 @@ export default function Hero() {
       label: "LinkedIn Profile",
     },
     {
-      href: "mailto:evan@evanreilly.me",
+      href: "#contact",
       icon: Mail,
       label: "Email Contact",
     },
@@ -51,7 +51,7 @@ export default function Hero() {
             Evan Reilly
           </h1>
           <p className="text-xl md:text-2xl font-light mb-4 animate-fadeInUp [animation-delay:0.2s] opacity-0 [animation-fill-mode:forwards]">
-            Full Stack Developer & Creative Problem Solver
+            Full Stack Engineer & Creative Problem Solver
           </p>
           <p className="text-lg md:text-xl mb-8 text-white/90 animate-fadeInUp [animation-delay:0.4s] opacity-0 [animation-fill-mode:forwards]">
             Crafting digital experiences with modern technologies and innovative solutions

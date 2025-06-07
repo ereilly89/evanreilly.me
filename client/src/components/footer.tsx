@@ -13,7 +13,7 @@ export default function Footer() {
       label: "LinkedIn Profile",
     },
     {
-      href: "mailto:evan@evanreilly.me",
+      href: "#contact",
       icon: Mail,
       label: "Email Contact",
     },
@@ -31,7 +31,6 @@ export default function Footer() {
             &copy; 2024 Evan Reilly. All rights reserved.
           </p>
           <p className="text-gray-400 mb-6">
-            Built with ❤️ using React, Tailwind CSS, and modern web technologies
           </p>
           
           {/* Social Icons */}

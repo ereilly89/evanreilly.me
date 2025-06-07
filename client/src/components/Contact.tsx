@@ -87,7 +87,6 @@ export default function Contact() {
     <section id="contact" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <h2 className="section-title">Get In Touch</h2>
-        
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl shadow-2xl p-8 lg:p-12">
             <p className="text-center text-lg text-gray-600 mb-8">

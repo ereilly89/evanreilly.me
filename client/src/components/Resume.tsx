@@ -13,7 +13,7 @@ export default function Resume() {
     });
     
     // Example of how it would work with a real file:
-    // window.open('/assets/evan-reilly-resume.pdf', '_blank');
+    window.open('/assets/Resume_Reilly_SoftwareEngineer.pdf', '_blank');
   };
 
   return (
@@ -21,7 +21,6 @@ export default function Resume() {
       <div className="container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="section-title text-white">Resume</h2>
-          <div className="section-title text-white after:bg-white"></div>
           
           <p className="text-xl mb-8 leading-relaxed text-white/90">
             Interested in learning more about my experience and qualifications? 
@@ -37,7 +36,7 @@ export default function Resume() {
           </button>
           
           <p className="mt-4 text-sm text-white/80">
-            PDF • Last updated November 2024
+            PDF • Last updated June 2025
           </p>
         </div>
       </div>

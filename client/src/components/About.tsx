@@ -1,12 +1,19 @@
 export default function About() {
   const skills = [
+    "Kubernetes",
+    "Python",
+    "Java",
     "JavaScript",
     "React",
     "Node.js",
-    "Python",
+    "Golang",
+    "Git",
+    "Bash",
+    "Jenkins",
     "MongoDB",
-    "PostgreSQL",
+    "MySQL",
     "AWS",
+    "IBM Cloud",
     "Docker",
   ];
 
@@ -19,7 +26,7 @@ export default function About() {
           {/* Image */}
           <div className="order-2 lg:order-1">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800"
+              src="/images/profile.png"
               alt="Evan Reilly - Professional headshot"
               className="w-full max-w-md mx-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2"
             />
@@ -32,21 +39,11 @@ export default function About() {
             </h3>
             
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-              <p>
-                I'm a passionate Full Stack Developer with over 5 years of experience creating web applications that make a difference. 
-                My journey started with a curiosity for how things work on the web, and it has evolved into a love for building 
-                scalable, user-friendly applications.
-              </p>
-              
-              <p>
-                I specialize in JavaScript technologies, with expertise in React, Node.js, and modern web development practices. 
-                I believe in writing clean, maintainable code and creating exceptional user experiences that solve real-world problems.
-              </p>
-              
-              <p>
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
-                or enjoying the great outdoors with my camera in hand.
-              </p>
+              <p>I’m a Full Stack Engineer with a background in Computer Science & Economics with a passion for building scalable systems and automating complex workflows to make life and business more efficient—from backend systems in the cloud to full-featured SaaS products.</p>
+                
+              <p>At IBM Cloud, I help deliver managed Kubernetes and Red Hat OpenShift services, taking on roles in release engineering, automation, technical leadership, system reliability, and support.</p>
+                
+              <p>Outside of work, whether I’m building SaaS apps and websites, investing, or experimenting with new ideas, I’m always focused on creating systems that grow, scale, and run themselves.</p>
             </div>
 
             {/* Skills */}
