@@ -20,7 +20,18 @@ export default function Footer() {
   ];
 
   const handleSocialClick = (href: string) => {
-    window.open(href, "_blank", "noopener noreferrer");
+    if (href.startsWith("#")) {
+      const element = document.querySelector(href);
+      if (element) {
+        const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - 80;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth",
+        });
+      }
+    } else {
+      window.open(href, "_blank", "noopener noreferrer");
+    }
   };
 
   return (
@@ -28,7 +39,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="text-center">
           <p className="text-lg mb-2">
-            &copy; 2024 Evan Reilly. All rights reserved.
+            &copy; 2025 Evan Reilly. All rights reserved.
           </p>
           <p className="text-gray-400 mb-6">
           </p>
