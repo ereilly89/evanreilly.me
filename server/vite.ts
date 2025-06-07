@@ -1,12 +1,23 @@
 import express, { type Express } from "express";
 import fs from "fs";
 import path from "path";
-import { createServer as createViteServer, createLogger } from "vite";
 import { type Server } from "http";
-import viteConfig from "../vite.config";
-import { nanoid } from "nanoid";
 
-const viteLogger = createLogger();
+let createViteServer: any;
+let createLogger: any;
+let viteConfig: any;
+let nanoid: any;
+let viteLogger: any;
+
+// Only import vite dependencies in development
+if (process.env.NODE_ENV === "development") {
+  const vite = await import("vite");
+  createViteServer = vite.createServer;
+  createLogger = vite.createLogger;
+  viteConfig = (await import("../vite.config.js")).default;
+  nanoid = (await import("nanoid")).nanoid;
+  viteLogger = createLogger();
+}
 
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
