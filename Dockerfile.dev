@@ -14,6 +14,8 @@ RUN npm ci
 # Copy source code
 COPY . .
 
+COPY .env.dev .env
+
 # Expose port
 EXPOSE 5000
 

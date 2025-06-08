@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
+import { sendContactEmail, isEmailConfigured } from "./email";
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -11,9 +12,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertContactSchema.parse(req.body);
       const contact = await storage.createContact(validatedData);
       
-      // In a real application, you would send an email here
-      console.log("New contact submission:", contact);
-      
+      // Send email notification if SMTP is configured
+      if (isEmailConfigured()) {
+        try {
+          await sendContactEmail(contact);
+          console.log("Contact email sent successfully for:", contact.email);
+        } catch (emailError) {
+          console.error("Failed to send contact email:", emailError);
+          // Continue with success response even if email fails
+        }
+      } else {
+        console.log("SMTP not configured, contact saved without email notification:", contact);
+      }
+
       res.json({ 
         success: true, 
         message: "Thank you for your message! I'll get back to you soon." 
