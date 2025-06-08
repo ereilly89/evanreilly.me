@@ -4,57 +4,57 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Dashboard",
-      description: "A comprehensive admin dashboard for e-commerce management with real-time analytics, inventory tracking, and order management features.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      technologies: ["React", "Node.js", "MongoDB", "Chart.js"],
-      githubUrl: "https://github.com/ereilly89",
-      liveUrl: "#",
+      title: "fittoscale.io",
+      description: "A SaaS app for personal trainers to scale their personal training business online.",
+      image: "/images/fittoscale_cover.png",
+      technologies: ["React", "Node.js", "MongoDB", "MySQL"],
+      //githubUrl: "https://github.com/ereilly89",
+      liveUrl: "https://fittoscale.io",
     },
     {
       id: 2,
-      title: "Social Connect Platform",
-      description: "A modern social media platform with real-time messaging, post sharing, and community features built with scalability in mind.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      technologies: ["React", "Socket.io", "Express", "PostgreSQL"],
-      githubUrl: "https://github.com/ereilly89",
-      liveUrl: "#",
+      title: "Real Estate Rental App",
+      description: "Property rental web application populated with data from Chicago Airbnb dataset. List your property for rent and generate rental price recommendations for your properties with random forest machine learning price recommendation model.",
+      image: "/images/chicagoairbnb_cover.jpeg",
+      technologies: ["Node.js", "Express", "MongoDB"],
+      githubUrl: "https://github.com/ereilly89/chicago-housing-rental-app",
+      //liveUrl: "#",
     },
     {
       id: 3,
-      title: "TaskFlow Manager",
-      description: "An intuitive task management system with drag-and-drop functionality, team collaboration tools, and progress tracking.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      technologies: ["Vue.js", "Python", "Django", "Redis"],
-      githubUrl: "https://github.com/ereilly89",
-      liveUrl: "#",
+      title: "Clout Manager",
+      description: "A discord bot built to add role management based on \"clout\" earned by posting good content. Add cryptocurrency and NFTs to your discord server, simulating a blockchain. Play blackjack, slots, roulette, sports bet on NFL games and much more.",
+      image: "/images/cloutmanager_cover.png",
+      technologies: ["Python", "MongoDB", "Discord.py"],
+      githubUrl: "https://github.com/ereilly89/cloutmanager-discordbot",
+      //liveUrl: "#",
     },
     {
       id: 4,
-      title: "Weather Analytics App",
-      description: "A beautiful weather application with detailed forecasts, historical data analysis, and interactive maps for weather visualization.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      technologies: ["React Native", "TypeScript", "GraphQL", "AWS"],
-      githubUrl: "https://github.com/ereilly89",
-      liveUrl: "#",
+      title: "Minecraft Economy Plugin",
+      description: "Trade markets for gold, iron, diamond, and emerald with prices based on their supply and demand within the world.",
+      image: "/images/minecraftplugin_cover.jpg",
+      technologies: ["Java"],
+      githubUrl: "https://github.com/ereilly89/reilly-economy-minecraft-plugin",
+      //liveUrl: "#",
     },
     {
       id: 5,
-      title: "Crypto Portfolio Tracker",
-      description: "A comprehensive cryptocurrency portfolio tracker with real-time price updates, portfolio analytics, and market trend analysis.",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      technologies: ["Next.js", "TypeScript", "TailwindCSS", "Prisma"],
-      githubUrl: "https://github.com/ereilly89",
-      liveUrl: "#",
+      title: "Intentional Sequences (XAI)",
+      description: "Explainable Artificial Intelligence (XAI) method built to explain reinforcment learning (RL) agent behavior using a policy summarization method known as \"Intentional Sequences\".",
+      image: "/images/intentionalsequences_cover.png",
+      technologies: ["Python", "XAI", "Reinforcement Learning"],
+      githubUrl: "https://github.com/ereilly89/intentional-sequence-xai",
+      thesisUrl: "https://minds.wisconsin.edu/bitstream/handle/1793/82594/Thesis_Reilly_Final_Draft.pdf?sequence=1&isAllowed=y",
     },
     {
       id: 6,
-      title: "FitTrack Mobile App",
-      description: "A comprehensive fitness tracking mobile application with workout planning, progress tracking, and social features for motivation.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      technologies: ["Flutter", "Firebase", "Machine Learning", "REST API"],
-      githubUrl: "https://github.com/ereilly89",
-      liveUrl: "#",
+      title: "UWW CompSci Alumni App",
+      description: "Calculates and displays various graduate statistics from database of graduates from the computer science department. Implements Google Maps API and Word Cloud. See average salary, employment rate, employer and school locations, and more.",
+      image: "/images/uwwalumni_cover.png",
+      technologies: ["Java", "JavaScript", "JSP", "MySQL"],
+      githubUrl: "https://github.com/ereilly89/uww-alumni-web-app",
+      //liveUrl: "#",
     },
   ];
 
@@ -103,6 +103,7 @@ export default function Projects() {
 
                 {/* Project Links */}
                 <div className="flex space-x-4">
+                  {project.githubUrl ?
                   <button
                     onClick={() => handleLinkClick(project.githubUrl)}
                     className="flex items-center text-primary hover:text-accent font-medium transition-colors duration-300"
@@ -110,13 +111,23 @@ export default function Projects() {
                     <Github className="w-4 h-4 mr-2" />
                     Code
                   </button>
-                  <button
-                    onClick={() => handleLinkClick(project.liveUrl)}
-                    className="flex items-center text-primary hover:text-accent font-medium transition-colors duration-300"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
-                  </button>
+                  :null}
+                  {
+                    project.liveUrl ? <button
+                                        onClick={() => handleLinkClick(project.liveUrl)}
+                                        className="flex items-center text-primary hover:text-accent font-medium transition-colors duration-300"
+                                      >
+                                        <ExternalLink className="w-4 h-4 mr-2" />
+                                            Live Demo
+                                        
+                                      </button> : (project.thesisUrl ? <button
+                                                                          onClick={() => handleLinkClick(project.thesisUrl)}
+                                                                          className="flex items-center text-primary hover:text-accent font-medium transition-colors duration-300"
+                                                                        >
+                                                                          <ExternalLink className="w-4 h-4 mr-2" />
+                                                                              Thesis
+                                                                        </button>: null)
+                  }
                 </div>
               </div>
             </article>
