@@ -35,15 +35,21 @@ export default function About() {
           {/* Content */}
           <div className="order-1 lg:order-2">
             <h3 className="text-3xl font-semibold mb-6 text-gray-900">
-              Hello! I'm Evan Reilly
+              Hi, I'm Evan Reilly
             </h3>
             
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-              <p>I’m a Full Stack Engineer with a background in Computer Science & Economics with a passion for building scalable systems and automating complex workflows to make life and business more efficient—from backend systems in the cloud to full-featured SaaS products.</p>
-                
-              <p>At IBM Cloud, I help deliver managed Kubernetes and Red Hat OpenShift services, taking on roles in release engineering, automation, technical leadership, system reliability, and support.</p>
-                
-              <p>Outside of work, whether I’m building SaaS apps and websites, investing, or experimenting with new ideas, I’m always focused on creating systems that grow, scale, and run themselves.</p>
+              <p>
+              Software engineer passionate about building scalable, cloud-native applications and automation. At IBM Cloud, I work on the IKS and ROKS team, delivering production-grade Kubernetes and OpenShift to enterprise clients.
+              </p>
+
+              <p>
+              My experience spans software architecture and design, from front-end development to backend development including database and API design, deployment, infrastructure automation, developer tooling, operations, and support — with a focus on automating complex systems and creating intuitive, reliable solutions.
+              </p>
+
+              <p>
+              Outside of work, I enjoy shipping software from discord bots to full-stack SaaS applications and hosting a variety of servers. I'm currently exploring opportunities to build impactful software, work with modern cloud and AI technologies, and contribute to high-performing engineering teams.
+              </p>
             </div>
 
             {/* Skills */}
