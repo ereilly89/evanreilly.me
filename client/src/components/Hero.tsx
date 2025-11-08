@@ -13,7 +13,7 @@ export default function Hero() {
       label: "LinkedIn Profile",
     },
     {
-      href: "#contact",
+      href: "mailto:evanreillyswe@gmail.com",
       icon: Mail,
       label: "Email Contact",
     },

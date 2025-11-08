@@ -35,7 +35,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-white text-black py-12">
       <div className="container mx-auto px-4">
         <div className="text-center">
           <p className="text-lg mb-2">
@@ -52,7 +52,7 @@ export default function Footer() {
                 <button
                   key={index}
                   onClick={() => handleSocialClick(link.href)}
-                  className="w-12 h-12 rounded-full bg-gray-800 hover:bg-primary text-gray-400 hover:text-white flex items-center justify-center text-lg transition-all duration-300 hover:-translate-y-1"
+                  className="w-12 h-12 rounded-full bg-gray-800 hover:bg-primary text-white hover:text-white flex items-center justify-center text-lg transition-all duration-300 hover:-translate-y-1"
                   aria-label={link.label}
                 >
                   <Icon className="w-6 h-6" />
