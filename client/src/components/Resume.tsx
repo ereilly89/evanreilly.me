@@ -36,7 +36,7 @@ export default function Resume() {
           </button>
           
           <p className="mt-4 text-sm text-white/80">
-            PDF • Last updated June 2025
+            PDF • Last updated Nov 2025
           </p>
         </div>
       </div>
