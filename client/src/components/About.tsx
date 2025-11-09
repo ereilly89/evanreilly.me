@@ -1,20 +1,25 @@
 export default function About() {
   const skills = [
     "Kubernetes",
+    "OpenShift",
     "Python",
     "Java",
-    "JavaScript",
+    "Golang",
+    "Bash",
     "React",
     "Node.js",
-    "Golang",
-    "Git",
-    "Bash",
-    "Jenkins",
-    "MongoDB",
     "MySQL",
-    "AWS",
-    "IBM Cloud",
+    "MongoDB",
+    "Node.js",
     "Docker",
+    "Git",
+    "IBM Cloud (IKS & ROKS)",
+    "Ansible",
+    "Jenkins",
+    "AWS",
+    "Django",
+    "Scikit",
+    "TensorFlow",
   ];
 
   return (
@@ -41,9 +46,9 @@ export default function About() {
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>I’m a Software Engineer at IBM with a background in distributed sytems, machine learning, and SaaS development.</p>
 
-              <p>I'm passionate about building scalable systems and automating complex workflows to make life and business more efficient.</p>
+              <p>I'm passionate about building scalable solutions and streamlining complex workflows to make life and business more efficient.</p>
 
-              <p>I graduated <i>Summa Cum Laude</i> with an M.S. degree in Computer Science and a B.S. in Computer Science & Economics from University of Wisconsin - Whitewater</p>
+              <p>I graduated <i>Summa Cum Laude</i> with an M.S. degree in Computer Science and a B.S. in Computer Science & Economics from the University of Wisconsin - Whitewater.</p>
             </div>
 
             {/* Skills */}
