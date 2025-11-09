@@ -48,7 +48,7 @@ export default function About() {
 
               <p>I'm passionate about building scalable solutions and streamlining complex workflows to make life and business more efficient.</p>
 
-              <p>I graduated <i>Summa Cum Laude</i> with an M.S. degree in Computer Science and a B.S. in Computer Science & Economics from the University of Wisconsin - Whitewater.</p>
+              <p>I graduated <i>Summa Cum Laude</i> with an M.S. in Computer Science and a B.S. in Computer Science & Economics from the University of Wisconsin - Whitewater.</p>
             </div>
 
             {/* Skills */}
