@@ -51,7 +51,7 @@ export default function Navigation() {
             }}
             className="text-2xl font-bold text-primary"
           >
-            ER
+            Evan Reilly
           </a>
 
           {/* Desktop Navigation */}

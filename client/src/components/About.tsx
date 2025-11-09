@@ -35,15 +35,15 @@ export default function About() {
           {/* Content */}
           <div className="order-1 lg:order-2">
             <h3 className="text-3xl font-semibold mb-6 text-gray-900">
-              Hello! I'm Evan Reilly
+              Hey, I'm Evan,
             </h3>
             
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-              <p>I’m a Full Stack Engineer with a background in Computer Science & Economics with a passion for building scalable systems and automating complex workflows to make life and business more efficient—from backend systems in the cloud to full-featured SaaS products.</p>
-                
-              <p>At IBM Cloud, I help deliver managed Kubernetes and Red Hat OpenShift services, taking on roles in release engineering, automation, technical leadership, system reliability, and support.</p>
-                
-              <p>Outside of work, whether I’m building SaaS apps and websites, investing, or experimenting with new ideas, I’m always focused on creating systems that grow, scale, and run themselves.</p>
+              <p>I’m a Software Engineer at IBM with a background in distributed sytems, machine learning, and SaaS development.</p>
+
+              <p>I'm passionate about building scalable systems and automating complex workflows to make life and business more efficient.</p>
+
+              <p>I graduated with an M.S. degree in Computer Science and graduated <i>Summa Cum Laude</i> with a B.S. in both Computer Science & Economics from University of Wisconsin - Whitewater</p>
             </div>
 
             {/* Skills */}
