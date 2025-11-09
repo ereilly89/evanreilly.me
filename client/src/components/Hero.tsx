@@ -51,12 +51,12 @@ export default function Hero() {
             Evan Reilly
           </h1>
           <p className="text-xl md:text-2xl font-light mb-4 animate-fadeInUp [animation-delay:0.2s] opacity-0 [animation-fill-mode:forwards]">
-            Full Stack Engineer & Creative Problem Solver
+            Software Engineer & Creative Problem Solver
           </p>
           <p className="text-lg md:text-xl mb-8 text-white/90 animate-fadeInUp [animation-delay:0.4s] opacity-0 [animation-fill-mode:forwards]">
-            Crafting digital experiences with modern technologies and innovative solutions
+            Building scalable systems and automated solutions using modern technologies
           </p>
-          
+
           {/* Social Icons */}
           <div className="flex justify-center space-x-6 animate-fadeInUp [animation-delay:0.6s] opacity-0 [animation-fill-mode:forwards]">
             {socialLinks.map((link, index) => {
