@@ -44,9 +44,9 @@ export default function About() {
             </h3>
 
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-              <p>I’m a Software Engineer at IBM with a background in distributed sytems, machine learning, and SaaS development.</p>
+              <p>I’m a Software Engineer at IBM with a background in AI, distributed sytems, and SaaS development.</p>
 
-              <p>I'm passionate about building scalable solutions and streamlining complex workflows to make life and business more efficient.</p>
+              <p>I'm passionate about building scalable systems and automation to power AI-driven products.</p>
 
               <p>I graduated <i>Summa Cum Laude</i> with an M.S. in Computer Science and a B.S. in Computer Science & Economics from the University of Wisconsin - Whitewater.</p>
             </div>

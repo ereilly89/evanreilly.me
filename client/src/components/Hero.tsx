@@ -54,7 +54,7 @@ export default function Hero() {
             Software Engineer & Creative Problem Solver
           </p>
           <p className="text-lg md:text-xl mb-8 text-white/90 animate-fadeInUp [animation-delay:0.4s] opacity-0 [animation-fill-mode:forwards]">
-            Building scalable systems and automated solutions using modern technologies
+            Building scalable platforms and automated solutions to power AI-driven products
           </p>
 
           {/* Social Icons */}
