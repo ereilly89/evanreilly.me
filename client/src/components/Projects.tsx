@@ -13,11 +13,14 @@ interface Project {
 }
 
 export default function Projects() {
-  const { data: githubProjects, isLoading, isError } = useQuery<Project[]>({
+  const { data: githubProjects } = useQuery<Project[]>({
     queryKey: ["/api/github/projects"],
   });
 
-  const projects = githubProjects ? [...manualProjects, ...githubProjects] : undefined;
+  // Always show manual projects; append GitHub pinned repos when loaded
+  const projects: Project[] = githubProjects
+    ? [...manualProjects, ...githubProjects]
+    : manualProjects;
 
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
   const [overflowing, setOverflowing] = useState<Record<string, boolean>>({});
@@ -48,32 +51,8 @@ export default function Projects() {
       <div className="container mx-auto px-4">
         <h2 className="section-title">Featured Projects</h2>
 
-        {isLoading && (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="project-card animate-pulse">
-                <div className="w-full h-64 bg-gray-200" />
-                <div className="p-6 space-y-3">
-                  <div className="h-5 bg-gray-200 rounded w-3/4" />
-                  <div className="h-4 bg-gray-200 rounded w-full" />
-                  <div className="h-4 bg-gray-200 rounded w-5/6" />
-                  <div className="flex gap-2 mt-2">
-                    <div className="h-6 bg-gray-200 rounded w-16" />
-                    <div className="h-6 bg-gray-200 rounded w-16" />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {isError && (
-          <p className="text-center text-gray-500">Unable to load projects at this time.</p>
-        )}
-
-        {projects && (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {projects.map((project) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {projects.map((project) => (
               <article key={project.name} className="project-card group">
                 <div className="relative overflow-hidden">
                   <img
@@ -97,7 +76,7 @@ export default function Projects() {
                     >
                       {project.description}
                     </p>
-                    {overflowing[project.name] && (
+                    {(overflowing[project.name] || expanded[project.name]) && (
                       <button
                         onClick={() => toggleExpanded(project.name)}
                         className="flex items-center text-sm text-gray-400 hover:text-gray-600 mt-1 transition-colors duration-200"
@@ -142,8 +121,7 @@ export default function Projects() {
                 </div>
               </article>
             ))}
-          </div>
-        )}
+        </div>
       </div>
     </section>
   );
