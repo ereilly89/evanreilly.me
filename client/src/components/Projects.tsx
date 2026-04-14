@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Github, ExternalLink, ChevronDown, ChevronUp } from "lucide-react";
-import manualProjects from "@/data/manualProjects";
+import manualProjects, { projectOverrides } from "@/data/manualProjects";
 
 interface Project {
   name: string;
+  imageKey?: string; // original repo name, used for local image lookup
   description: string;
   githubUrl?: string | null;
   liveUrl?: string | null;
@@ -17,9 +18,13 @@ export default function Projects() {
     queryKey: ["/api/github/projects"],
   });
 
-  // Always show manual projects; append GitHub pinned repos when loaded
+  // Always show manual projects; append GitHub pinned repos when loaded.
+  // Apply any overrides from projectOverrides to GitHub-fetched projects.
   const projects: Project[] = githubProjects
-    ? [...manualProjects, ...githubProjects]
+    ? [
+        ...manualProjects,
+        ...githubProjects.map((p) => ({ ...p, ...projectOverrides[p.name], imageKey: p.name })),
+      ]
     : manualProjects;
 
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
@@ -56,7 +61,7 @@ export default function Projects() {
               <article key={project.name} className="project-card group">
                 <div className="relative overflow-hidden">
                   <img
-                    src={`/images/${project.name}.png`}
+                    src={`/images/${project.imageKey ?? project.name}.png`}
                     onError={(e) => { (e.currentTarget as HTMLImageElement).src = project.image; }}
                     alt={`${project.name} project screenshot`}
                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
