@@ -4,7 +4,8 @@ import { log } from "./vite";
 import dotenv from "dotenv";
 
 // Load environment variables
-dotenv.config();
+const envFile = process.env.NODE_ENV === "production" ? ".env.prod" : ".env.dev";
+dotenv.config({ path: envFile });
 
 const app = express();
 app.use(express.json());

@@ -19,7 +19,7 @@ export default function Navigation() {
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
     { href: "#resume", label: "Resume" },
-    //{ href: "#contact", label: "Contact" },
+    { href: "#contact", label: "Contact" },
   ];
 
   const handleNavClick = (href: string) => {
